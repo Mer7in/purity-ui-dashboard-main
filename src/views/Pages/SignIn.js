@@ -15,6 +15,7 @@ import {
 } from "@chakra-ui/react";
 // Assets
 import signInImage from "assets/img/signInImage.png";
+import { NavLink } from "react-router-dom";
 
 function SignIn() {
   // Chakra color mode
@@ -106,7 +107,14 @@ function SignIn() {
                   bg: "teal.400",
                 }}
               >
-                SIGN IN
+                <NavLink
+                  to={"/admin/dashboard"}
+                  as="span"
+                  ms="5px"
+                  fontWeight="bold"
+                >
+                  SIGN IN
+                </NavLink>
               </Button>
             </FormControl>
             <Flex
